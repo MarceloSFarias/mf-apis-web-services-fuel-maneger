@@ -13,9 +13,10 @@ namespace mf_apis_web_services_fuel_maneger.Models
         [Required]
         public DateTime Data { get; set; }
         [Required]
-        public string Valor { get; set;}
+        [Column(TypeName ="decimal(18,2)")]
+        public decimal Valor { get; set;}
         [Required]
-        public  tipoCombustivel Tipo { get; set;}
+        public  TipoCombustivel Tipo { get; set;}
 
         [Required]
         public int VeiculoId { get;set;}
@@ -24,7 +25,7 @@ namespace mf_apis_web_services_fuel_maneger.Models
 
     }
 
-    public enum tipoCombustivel
+    public enum TipoCombustivel
     {
         Diesel,
         Etanol,
